@@ -1,0 +1,570 @@
+/*
+1. Posicionamiento
+2. Modelo de caja (Box model)
+3. Tipografia
+4. Visuales 
+5. Otros
+*/
+
+/*Variables*/
+:root{
+    --bitcoin-orange:#F7931A;
+    --soft-orange:#FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue:#E7F5FF;
+    --warm-black:#201E1C;
+    --black:#282623;
+    --grey:#BABABA;
+    --off-white: #FAF8F7;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    font-size: 65.5%;
+    font-family: 'DM Sans',sans-serif;
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);;
+}
+header img {
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center;
+}
+
+.header--title-container{
+    width:90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin-top: 40px;
+    height:218px;
+    text-align: center;
+    align-self: center;
+}
+.header--title-container h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color:var(--white)
+}
+.header--title-container p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color:var(--soft-orange);
+    margin: 24px 0;
+}
+
+.header--button{
+    position: absolute;
+    left:calc(50% - 118px);
+    top: 270px; /*mover el elemento */
+    display: block;
+    margin-top: 35px;
+    padding: 15px;
+    width: 250px;
+    height: 48px;
+    background: var(--off-white);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color:var(--black);
+}
+.header--button span{
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url('../assets/icons/arrowdown.svg');
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+main{
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+.main--exchange-container{
+    width: 100%;
+    height:auto;
+    padding-top: 80px;
+    padding-bottom: 30px; 
+    text-align: center;
+}
+
+.main--exchange-container--title{
+    width:90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin:0 auto;
+}
+.backgroundImg{
+    width: 195px;
+    height: 195px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url('../assets/images/Bitcoin.svg');
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+}
+.main--exchange-container--title h2{
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+.main--exchange-container--title p{
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
+}
+/*Estilos de tabla*/
+.main--currency-table{
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin:0 auto;
+    font-family: "Inter",sans-serif;
+}
+.main--currency-table .currency-table--title{
+   margin-bottom:15px;
+   font-size: 1.8rem;
+   font-weight: bold;
+   line-height: 2.3rem;
+   color:var(--bitcoin-orange);
+   text-align: center;
+}
+.currency-table--container{
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height:250px;
+    margin: 0 auto;
+}
+.currency-table--container table{
+    width: 100%;
+    height: 100%;
+}
+.currency-table--container td{
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--white);
+}
+
+.table__top-left{
+    border-radius: 15px 0 0 0;
+}
+.table__top-right{
+    border-radius: 0 15px 0 0;
+}
+.table__bottom-left{
+    border-radius: 0 0 0 15px;
+}
+.table__bottom-right{
+    border-radius: 0 0 15px 0;
+}
+
+/*aqui como se empalman clases si es necesario ser mas especifico*/
+.currency-table--container .table__right{
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color:#757575;
+}
+.icon-down{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('../assets/icons/trending-down1.svg');
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: cover;
+}
+.icon-up{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url('../assets/icons/trending-up1.svg');
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: cover;
+}
+.comissions-table--container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px;
+    border-radius: 15px;
+    min-width: 230px;
+    max-width: 300px; 
+    margin:0 auto;
+}
+.comissions-table--title{
+    margin-bottom:15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color:var(--secondary-blue);
+    text-align: center;
+ }
+
+ .comissions-table--container__element{
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--white);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+}
+.table-comissions__right{
+
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color:#757575;
+}
+.currency-table--date{
+    width:190px;
+    height: 30px;
+    margin:0 auto;
+    margin-top: 15px;
+    padding:8px;
+    background:var(--soft-orange);
+    border-radius: 8px;
+
+}
+.currency-table--date p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:var(--warm-black)
+}
+.commissions-table--date{
+    width:190px;
+    height: 30px;
+    margin:0 auto;
+    margin-top: 15px;
+    padding:8px;
+    background:var(--soft-blue);
+    border-radius: 8px;
+
+}
+
+.commissions-table--date p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color:var(--warm-black)
+}
+
+.main-product-detail{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+}
+.product-detail--papita{
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    top:-10px ;
+    left: calc(50% - 20px);
+    background-image: url("../assets/images/Papita-logo.svg");
+}
+
+.product-detail--tittle{
+    width:90%;
+    min-width:288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.product-detail--tittle h2{
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color:var(--white)
+}
+
+.product-detail--tittle p{
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color:#808080
+}
+
+.product-detail--card{
+    width: 90%;
+    min-width:288px;
+    max-width: 400px;
+    min-height: 150px;
+    margin:15px auto;
+    padding: 15px;
+    background-color: var(--black);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+.product-detail--card .clock{
+    display: inline-block;
+    width: 20px;
+    height:20px;
+    margin-bottom: 10px;
+    background-image: url("../assets/icons/clock.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.product-detail--card .eye{
+    display: inline-block;
+    width: 20px;
+    height:20px;
+    margin-bottom: 10px;
+    background-image: url("../assets/icons/eye1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.product-detail--card .money{
+    display: inline-block;
+    width: 20px;
+    height:20px;
+    margin-bottom: 10px;
+    background-image: url("../assets/icons/dollar-sign1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.product-detail--card .check{
+    display: inline-block;
+    width: 20px;
+    height:20px;
+    margin-bottom: 10px;
+    background-image: url("../assets/icons/check-circle1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.product--card-title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color:var(--white);
+}
+.product--card-body{
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color:#808080;
+}
+.bitcoin-img--container{
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+    background-image: url(../assets/images/bitcoinbaby2x.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bitcoin-img--container h2{
+ padding-top: 60px;
+ font-size: 2.4rem;
+ font-weight: bold;
+ line-height: 2.6rem;
+ color: var(--white);
+ text-align: center;
+}
+
+/*Estilos de la seccion de planes*/
+.main-plans-container{
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+.plans-title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.plans-title h2{
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black)
+}
+.plans-title p{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+
+.recomendado{
+    position: absolute;
+    left: calc(50% - 49.5px); /*la mitad de la medida del elemento*/
+    top: -15px;
+    width: 101px;
+    height: 31px;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: bold;
+    font-family:"Inter",sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    padding: 5px 0;
+
+}
+
+.plan-card--title{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500px;
+    line-height: 1.8rem;
+    color: var(--black)
+}
+.plan-card--price{
+    padding:5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+   
+    color: black;
+    position: relative;
+}
+.plan-card--price span{
+    position: absolute;
+    top: 15px;
+    left: calc(50% - 50px);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color:#363636;
+    padding-bottom: 10px;
+}
+.plan-card--saving{
+    font-family:"Inter",sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #757575;
+}
+
+.plan-card--ca{
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: var(--soft-orange);
+    border:2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    font-size: 1.4rem; 
+    font-weight: bold;
+    line-height: 1.8rem;
+    font-family: 'DM Sans',sans-serif;
+}
+
+.plan-card--ca span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/icons/arrow-right1.svg");
+    vertical-align: text-bottom;
+}
+
+.plans-container--card{
+    position: relative;
+    scroll-snap-align:center;
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 10px 0 ;
+    padding:0 15px;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.plans-contaner--slider{
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+/*Estilos del footer */
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background:var(--bitcoin-orange);
+
+}
+
+footer section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.section__left ul{
+ list-style: none;
+ font-size: 1.4rem;
+ font-weight: 500;
+ line-height: 1.8rem;
+}
+.section__left li{
+    margin: 10px 0;
+}
+.section__left a{
+     text-decoration: none;
+     color:var(--white)
+}
